@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZyHome - Home Appliances</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>ZyHome</h1>
+    <p>Best Home & Kitchen Appliances in Pakistan - COD Available</p>
+
+<div class="products">
+    
+    <!-- Product 1: Air Fryer -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300.png?text=Air+Fryer" alt="Air Fryer">
+        <h3>Air Fryer 5L</h3>
+        <p class="price">Rs. 12,999</p>
+        <a href="products/air-fryer.html"><button>Details & Order</button></a>
+    </div>
+
+    <!-- Product 2: Blender -->
+    <div class="product">
+        <img src="https://via.placeholder.com/300x300.png?text=Blender" alt="Blender">
+        <h3>Steel Blender 2-in-1</h3>
+        <p class="price">Rs. 4,999</p>
+        <a href="products/blender.html"><button>Details & Order</button></a>
+    </div>
+
+</div>
+</body>
+</html>
