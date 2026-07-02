@@ -1,62 +1,48 @@
 
 
-body { 
-font-family: Arial, sans-serif; 
-padding: 20px; 
-max-width: 1000px; 
-margin: auto; 
-background: #f9f9f9; 
-} 
-h1 { color: #333; text-align: center; } 
-.products { 
-display: flex; 
-flex-wrap: wrap; 
-gap: 20px; 
-justify-content: center; 
-} 
-.product { 
-border: 1px solid #ddd; 
-padding: 15px; 
-width: 280px; 
-text-align: center; 
-background: white; 
-border-radius: 8px; 
-} 
-.product img { 
-width: 100%; 
-height: 250px; 
-object-fit: cover; 
-border-radius: 5px; 
-} 
-.price { 
-color: #e63946; 
-font-size: 22px; 
-font-weight: bold; 
-} 
-button { 
-background: #25D366; 
-color: white; 
-padding: 12px 20px; 
-border: none; 
-font-size: 16px; 
-cursor: pointer; 
-width: 100%; 
-border-radius: 5px; 
-margin-top: 10px; 
-} 
-input { 
-width: 95%; 
-padding: 12px; 
-margin: 8px 0; 
-border: 1px solid #ddd; 
-border-radius: 5px; 
-} 
-.product-page { 
-max-width: 600px; 
-margin: auto; 
-background: white; 
-padding: 20px; 
-border-radius: 8px; 
-} 
-.product-page img { width: 100%; border-radius: 5px; } 
-a { text-decoration: none; }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Fryer 5L - ZyHome</title>
+    <link rel="stylesheet" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <a href="../index.html">← Back to Home</a>
+
+<div class="product-page">
+    <img src="https://via.placeholder.com/400x400.png?text=Air+Fryer+5L" alt="Air Fryer">
+    <h1>Air Fryer 5L</h1>
+    <p class="price">Rs. 12,999</p>
+    
+    <h3>Description:</h3>
+    <p>
+        5L Badi Capacity | Oil-Free Healthy Cooking | 8 Preset Menus | 
+        Touch Panel | 1 Saal Warranty | Free Delivery All Pakistan | Cash on Delivery
+    </p>
+
+    <h2>Order Now on WhatsApp</h2>
+    <form onsubmit="orderWhatsApp(); return false;">
+      <input type="text" id="cname" placeholder="Apka Name" required>
+      <input type="text" id="cphone" placeholder="Phone: 03xxxxxxxxx" required>
+      <input type="text" id="caddress" placeholder="Mukammal Address" required>
+      <input type="hidden" id="cproduct" value="Air Fryer 5L - Rs. 12,999">
+      <button type="submit">WhatsApp Pe Order Confirm Karo</button>
+    </form>
+</div>
+
+<script>
+function orderWhatsApp() {
+  let name = document.getElementById("cname").value;
+  let phone = document.getElementById("cphone").value;
+  let address = document.getElementById("caddress").value;
+  let product = document.getElementById("cproduct").value;
+  
+  let text = `*New Order - ZyHome*%0A%0AProduct: ${product}%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}`;
+  
+  let yourWhatsApp = "923001234567"; // ← YAHAN APNA NUMBER 92 KE SAATH DALO
+  window.open(`https://wa.me/${yourWhatsApp}?text=${text}`, '_blank');
+}
+</script>
+</body>
+</html>
